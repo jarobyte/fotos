@@ -18,6 +18,7 @@ def difference(a, b):
 
 diff = difference(contenidoActual, contenidoAnterior)
 print("Los siguientes archivos no estaban:" + str(diff))
+print()
 
 def registrar(archivo):
     registro = open("registro", "a")
