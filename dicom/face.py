@@ -1,9 +1,6 @@
 from scipy import misc
 import matplotlib.pyplot as plt
 
-f = misc.face()
+f = misc.imread("ojo.png")
 plt.imshow(f)
 plt.show()
-
-misc.imsave("hola.png", f)
-adios = misc.imread("hola.png")
