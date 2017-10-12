@@ -1,5 +1,7 @@
 from os import listdir
+import requests 
 
+url="http://www.daic.infotec.com.mx:8080"
 carpeta = "imagenes"
 print("Monitoreando /" + carpeta)
 print()
@@ -29,6 +31,11 @@ def registrar(archivo):
 def enviar(archivo):
     print()
     print("Enviando " + archivo)
+    fin = open(carpeta + "/" + archivo, 'rb')
+    data = {'file': fin}
+    r = requests.post(url, files=data)
+    r
+    fin.close
     print("Enviado  " + archivo)
     registrar(archivo)
     print()
