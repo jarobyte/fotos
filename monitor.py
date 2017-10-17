@@ -20,6 +20,7 @@ historial = open("historial", "r")
 contenidoAnteriorCadena = historial.read()
 historial.close()
 contenidoAnterior = contenidoAnteriorCadena.splitlines()
+contenidoAnterior = contenidoAnterior[1:]
 print "El contenido anterior de la carpeta era:" + str(contenidoAnterior)
 
 def difference(a, b):
@@ -51,6 +52,7 @@ for i in diff:
     enviar(i)
 
 nuevoHistorial = open("historial", "w")
+nuevoHistorial.write(carpeta + "\n")
 for i in contenidoActual:
     nuevoHistorial.write(str(i) + "\n")
 nuevoHistorial.close()
